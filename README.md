@@ -1,4 +1,5 @@
-# ItemMods-Addon
-An example addon for itemmods!
+# FoodMods
 
-See [here](https://github.com/CodeDoctorDE/ItemMods/wiki/Create-addons) to see the guide.
+Create custom food with this addon.
+
+*in development*
