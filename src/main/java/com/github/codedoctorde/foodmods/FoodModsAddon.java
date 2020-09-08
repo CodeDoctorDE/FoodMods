@@ -1,4 +1,4 @@
-package com.github.codedoctorde.itemmodsaddon;
+package com.github.codedoctorde.foodmods;
 
 import com.github.codedoctorde.itemmods.api.ItemModsAddon;
 import org.jetbrains.annotations.NotNull;
@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * @author CodeDoctorDE
  */
-public class ExampleItemModsAddon extends ItemModsAddon {
+public class FoodModsAddon extends ItemModsAddon {
     @NotNull
     public String getName() {
         return "Example Name";

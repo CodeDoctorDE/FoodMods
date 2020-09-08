@@ -1,0 +1,7 @@
+name: FoodMods
+author: CodeDoctorDE
+api-version: "1.14"
+main: com.github.codedoctorde.itemmodsaddon.FoodMods
+version: "1.0"
+depend:
+  - ItemMods

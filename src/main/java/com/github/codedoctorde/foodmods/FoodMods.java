@@ -1,4 +1,4 @@
-package com.github.codedoctorde.itemmodsaddon;
+package com.github.codedoctorde.foodmods;
 
 import com.github.codedoctorde.itemmods.ItemMods;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -6,8 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 /**
  * @author CodeDoctorDE
  */
-public class ExampleMods extends JavaPlugin {
-    private ExampleItemModsAddon addon = new ExampleItemModsAddon();
+public class FoodMods extends JavaPlugin {
+    private FoodModsAddon addon = new FoodModsAddon();
 
     @Override
     public void onEnable() {
