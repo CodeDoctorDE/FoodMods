@@ -53,4 +53,8 @@ public class FoodMods extends JavaPlugin {
     public static FoodMods getPlugin() {
         return plugin;
     }
+
+    public ObjectConfig getTranslationConfig() {
+        return translationConfig;
+    }
 }

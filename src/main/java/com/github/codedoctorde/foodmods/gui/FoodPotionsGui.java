@@ -1,16 +1,18 @@
 package com.github.codedoctorde.foodmods.gui;
 
 import com.github.codedoctorde.api.ui.Gui;
+import com.github.codedoctorde.api.ui.GuiEvent;
 import com.github.codedoctorde.api.ui.GuiItem;
 import com.github.codedoctorde.api.ui.template.gui.ListGui;
 import com.github.codedoctorde.api.ui.template.gui.events.GuiListEvent;
 import com.github.codedoctorde.foodmods.FoodMods;
+import org.bukkit.entity.Player;
 
 /**
  * @author CodeDoctorDE
  */
-public class FoodPotionListGui {
-    public Gui createGui(){
+public class FoodPotionsGui {
+    public Gui[] createGui(){
         return new ListGui(FoodMods.getPlugin(), new GuiListEvent() {
             @Override
             public String title(int i, int i1) {
@@ -21,6 +23,7 @@ public class FoodPotionListGui {
             public GuiItem[] pages(String s) {
                 return new GuiItem[0];
             }
-        }).createGui(FoodMods.getPlugin().);
+        }, new GuiEvent() {
+        }).createGui(FoodMods.getPlugin().getTranslationConfig().getJsonObject("gui", "potions"));
     }
 }
