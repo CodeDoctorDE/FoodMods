@@ -2,6 +2,7 @@ package com.github.codedoctorde.foodmods;
 
 import com.github.codedoctorde.foodmods.template.FoodTemplate;
 import com.github.codedoctorde.itemmods.api.ItemModsAddon;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,7 +20,7 @@ public class FoodModsAddon extends ItemModsAddon {
     }
 
     @NotNull
-    public org.bukkit.inventory.ItemStack getIcon() {
+    public ItemStack getIcon() {
         return null;
     }
 

@@ -1,0 +1,25 @@
+{
+  "plugin": {
+    "loading": "§6FoodMods §7» §eLoading plugin...",
+    "loaded": "§6FoodMods §7» §aSuccessfully loaded plugin!",
+    "unloading": "§6FoodMods §7» §eUnloading plugin...",
+    "unloaded": "§6FoodMods §7» §aSuccessfully unloaded plugin!",
+    "compatible": "§6FoodMods §7» §6This plugin isn't compactible with your version!"
+  },
+  "template": {
+    "icon": {
+      "material": "APPLE",
+      "name": "§6Food",
+      "lore": [
+        "",
+        "§7Create custom foods with",
+        "§7custom effects"
+      ]
+    }
+  },
+  "gui": {
+    "potionlist": {
+
+    }
+  }
+}

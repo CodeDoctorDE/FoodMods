@@ -1,5 +1,6 @@
-package com.github.codedoctorde.foodmods.template;
+package com.github.codedoctorde.foodmods.gui;
 
+import com.github.codedoctorde.foodmods.template.FoodTemplate;
 import com.github.codedoctorde.itemmods.ItemMods;
 import com.github.codedoctorde.itemmods.config.ItemConfig;
 import com.github.codedoctorde.itemmods.gui.item.ItemGui;

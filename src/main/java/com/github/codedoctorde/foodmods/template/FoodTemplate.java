@@ -1,9 +1,9 @@
 package com.github.codedoctorde.foodmods.template;
 
+import com.github.codedoctorde.foodmods.gui.FoodTemplateGui;
 import com.github.codedoctorde.itemmods.ItemMods;
 import com.github.codedoctorde.itemmods.api.item.CustomItemTemplate;
 import com.github.codedoctorde.itemmods.config.ItemConfig;
-import com.github.codedoctorde.api.ui.Gui;
 import com.github.codedoctorde.api.utils.ItemStackBuilder;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
