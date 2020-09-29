@@ -1,4 +1,7 @@
 # FoodMods
+
+> The plugin is still under development and there are currently no releases! Please wait and click on "Watch resource!" to get a notification when the first release comes!
+
 ![Jenkins](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.codemc.io%2Fjob%2FCodeDoctorDE%2Fjob%2FFoodMods%2F&style=for-the-badge)
 ![Spiget Downloads](https://img.shields.io/spiget/downloads/72461?style=for-the-badge)
 ![Spiget Version](https://img.shields.io/spiget/version/72461?style=for-the-badge)
