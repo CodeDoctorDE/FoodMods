@@ -1,12 +1,11 @@
-package com.github.codedoctorde.foodmods.gui;
+package dev.linwood.foodmods.gui;
 
 import com.github.codedoctorde.api.ui.Gui;
 import com.github.codedoctorde.api.ui.GuiEvent;
 import com.github.codedoctorde.api.ui.GuiItem;
 import com.github.codedoctorde.api.ui.template.gui.ListGui;
 import com.github.codedoctorde.api.ui.template.gui.events.GuiListEvent;
-import com.github.codedoctorde.foodmods.FoodMods;
-import org.bukkit.entity.Player;
+import dev.linwood.foodmods.FoodMods;
 
 /**
  * @author CodeDoctorDE

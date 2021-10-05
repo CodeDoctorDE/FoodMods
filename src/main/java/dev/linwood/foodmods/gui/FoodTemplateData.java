@@ -1,6 +1,6 @@
-package com.github.codedoctorde.foodmods.gui;
+package dev.linwood.foodmods.gui;
 
-import com.github.codedoctorde.foodmods.template.FoodTemplate;
+import dev.linwood.foodmods.template.FoodTemplate;
 import com.github.codedoctorde.itemmods.config.ItemConfig;
 import org.bukkit.potion.PotionEffect;
 

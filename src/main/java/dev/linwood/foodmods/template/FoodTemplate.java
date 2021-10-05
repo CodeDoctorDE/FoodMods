@@ -1,6 +1,7 @@
-package com.github.codedoctorde.foodmods.template;
+package dev.linwood.foodmods.template;
 
-import com.github.codedoctorde.foodmods.gui.FoodTemplateGui;
+import dev.linwood.foodmods.FoodMods;
+import dev.linwood.foodmods.gui.FoodTemplateGui;
 import com.github.codedoctorde.itemmods.ItemMods;
 import com.github.codedoctorde.itemmods.api.item.CustomItemTemplate;
 import com.github.codedoctorde.itemmods.config.ItemConfig;
@@ -8,6 +9,11 @@ import com.github.codedoctorde.api.utils.ItemStackBuilder;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import dev.linwood.itemmods.ItemMods;
+import dev.linwood.itemmods.pack.PackObject;
+import dev.linwood.itemmods.pack.asset.PackAsset;
+import dev.linwood.itemmods.pack.custom.CustomData;
+import dev.linwood.itemmods.pack.custom.CustomTemplate;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -17,37 +23,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FoodTemplate implements CustomItemTemplate {
-    JsonObject templateTranslation = ItemMods.getPlugin().getTranslationConfig().getJsonObject().getAsJsonObject("addon")
+public class FoodTemplate extends CustomTemplate {
+    JsonObject templateTranslation = FoodMods.getTranslationConfig().getJsonObject().getAsJsonObject("addon")
             .getAsJsonObject("templates").getAsJsonObject("item").getAsJsonObject("food");
-    @NotNull
-    @Override
-    public ItemStack getIcon(ItemConfig itemConfig) {
-        return new ItemStackBuilder(templateTranslation.getAsJsonObject("icon")).build();
-    }
-
-    @NotNull
-    @Override
-    public ItemStack getMainIcon(ItemConfig itemConfig) {
-        return new ItemStackBuilder(templateTranslation.getAsJsonObject("main-icon")).format().build();
-    }
-
-    @Override
-    public boolean isCompatible(ItemConfig itemConfig) {
-        return false;
-    }
-
-    @Override
-    public boolean openConfigGui(ItemConfig itemConfig, Player player) {
-        new FoodTemplateGui(this, itemConfig).createGui().open(player);
-        return true;
-    }
-
-    @NotNull
-    @Override
-    public String getName() {
-        return templateTranslation.get("name").getAsString();
-    }
 
     static class FoodTemplateData {
         private final FoodTemplate template;
@@ -101,9 +79,6 @@ public class FoodTemplate implements CustomItemTemplate {
             return template;
         }
 
-        public ItemConfig getItemConfig() {
-            return itemConfig;
-        }
         public void save() {
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("level", level);
