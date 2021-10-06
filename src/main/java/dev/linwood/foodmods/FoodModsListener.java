@@ -1,6 +1,5 @@
 package dev.linwood.foodmods;
 
-import dev.linwood.foodmods.template.FoodTemplate;
 import dev.linwood.itemmods.api.item.CustomItem;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

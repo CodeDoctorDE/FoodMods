@@ -1,7 +1,7 @@
-package dev.linwood.foodmods.gui;
+package dev.linwood.foodmods;
 
-import dev.linwood.foodmods.template.FoodTemplate;
-import com.github.codedoctorde.itemmods.config.ItemConfig;
+import dev.linwood.itemmods.pack.PackObject;
+import dev.linwood.itemmods.pack.asset.TemplateReadyPackAsset;
 import org.bukkit.potion.PotionEffect;
 
 import java.util.ArrayList;
@@ -11,15 +11,15 @@ import java.util.List;
  * @author CodeDoctorDE
  */
 public class FoodTemplateData {
-    private final FoodTemplate template;
-    private final ItemConfig itemConfig;
+    private final PackObject packObject;
+    private final TemplateReadyPackAsset packAsset;
     private List<PotionEffect> effects = new ArrayList<>();
     private int saturation;
     private int foodLevel;
 
-    public FoodTemplateData(FoodTemplate template, ItemConfig itemConfig) {
-        this.template = template;
-        this.itemConfig = itemConfig;
+    public FoodTemplateData(PackObject packObject, TemplateReadyPackAsset packAsset) {
+        this.packObject = packObject;
+        this.packAsset = packAsset;
     }
 
     public int getFoodLevel() {
