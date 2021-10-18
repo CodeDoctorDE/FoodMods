@@ -1,7 +1,9 @@
 package dev.linwood.foodmods;
 
+import dev.linwood.itemmods.ItemMods;
 import dev.linwood.itemmods.pack.PackObject;
 import dev.linwood.itemmods.pack.asset.TemplateReadyPackAsset;
+import dev.linwood.itemmods.pack.custom.CustomData;
 import org.bukkit.potion.PotionEffect;
 
 import java.util.ArrayList;
@@ -13,12 +15,14 @@ import java.util.List;
 public class FoodTemplateData {
     private final PackObject packObject;
     private final TemplateReadyPackAsset packAsset;
+    private final CustomData customData;
     private List<PotionEffect> effects = new ArrayList<>();
     private int saturation;
     private int foodLevel;
 
-    public FoodTemplateData(PackObject packObject, TemplateReadyPackAsset packAsset) {
+    public FoodTemplateData(PackObject packObject, CustomData customData, TemplateReadyPackAsset packAsset) {
         this.packObject = packObject;
+        this.customData = customData;
         this.packAsset = packAsset;
     }
 
@@ -43,6 +47,7 @@ public class FoodTemplateData {
     }
 
     public void save() {
-
+        customData.setData(ItemMods.GSON.toJsonTree(this));
+        customData.save();
     }
 }

@@ -55,4 +55,16 @@ public class FoodMods extends JavaPlugin {
     public static TranslationConfig getTranslationConfig() {
         return translationConfig;
     }
+
+    public static String getTranslation(String key, Object... placeholders) {
+        return translationConfig.getTranslation(key, placeholders);
+    }
+
+    public static Translation subTranslation(String... namespaces) {
+        if (namespaces.length == 0)
+            return new Translation();
+        var t = translationConfig.subTranslation(namespaces[0]);
+        for (String namespace : namespaces) t = t.merge(translationConfig.subTranslation(namespace));
+        return t;
+    }
 }

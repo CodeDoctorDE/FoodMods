@@ -20,19 +20,19 @@ public class FoodTemplate extends CustomTemplate {
     }
 
     @Override
-    public @NotNull ItemStack getIcon(PackObject packObject, CustomData customData, TemplateReadyPackAsset packAsset) {
+    public @NotNull ItemStack getItemIcon(PackObject packObject, CustomData customData, TemplateReadyPackAsset packAsset) {
         return templateTranslation.subTranslation("icon").translate(new ItemStackBuilder(Material.GOLDEN_APPLE).displayName("title")
                 .lore("description")).build();
     }
 
     @Override
-    public @NotNull ItemStack getMainIcon() {
+    public @NotNull ItemStack getIcon(String namespace) {
         return templateTranslation.subTranslation("main-icon").translate(new ItemStackBuilder(Material.GOLDEN_APPLE).displayName("title")
                 .lore("description")).build();
     }
 
     @Override
-    public @Nullable CommandAction generateAction(PackObject packObject, CustomData data, TemplateReadyPackAsset asset) {
-        return new FoodModsAction(packObject, data, asset);
+    public @Nullable CommandAction generateItemAction(PackObject packObject, CustomData data, TemplateReadyPackAsset asset) {
+        return new FoodAction(packObject, data, asset);
     }
 }
